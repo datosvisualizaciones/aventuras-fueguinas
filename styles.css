@@ -451,11 +451,11 @@ main {
 /* Tours Section - Cuadrícula 3x3 */
 .tours-grid-3x3 {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "tren parque tolhuin laguna"
-    "tren cerro city .";
+    "tren tren tolhuin laguna"
+    "parque cerro city .";
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1200px;
