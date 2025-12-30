@@ -448,6 +448,135 @@ main {
   align-items: center;
 }
 
+/* Tours Section - Nueva estructura unificada */
+.tour-destacado {
+  background: white;
+  margin: 3rem 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.tour-destacado-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem;
+}
+
+.tour-destacado-main h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.tour-destacado-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+}
+
+.tour-destacado-main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+}
+
+.tour-destacado-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tour-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+}
+
+.tour-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-card-body {
+  padding: 1.5rem;
+}
+
+.tour-card-body h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.tour-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin: 0 0 1.25rem;
+}
+
+.tour-card .btn-outline {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Responsive para tour destacado */
+@media (max-width: 768px) {
+  .tour-destacado-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .tour-destacado-main h3 {
+    font-size: 2rem;
+  }
+
+  .tour-destacado-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-destacado-layout {
+    padding: 1.5rem;
+  }
+
+  .tour-destacado-main h3 {
+    font-size: 1.75rem;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 .footer-small {
   opacity: 0.8;
 }
