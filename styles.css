@@ -226,7 +226,7 @@ main {
 }
 
 .section {
-  padding-block: 4.5rem;
+  padding-block: 3rem;
 }
 
 .section-light {
@@ -235,7 +235,7 @@ main {
 
 .section-header {
   text-align: left;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-header h2 {
@@ -454,7 +454,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -631,7 +631,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .vehiculo-image {
@@ -677,7 +677,7 @@ main {
 
 /* Sección de Enlaces */
 .enlaces-list {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .enlace-item {
