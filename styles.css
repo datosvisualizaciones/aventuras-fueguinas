@@ -451,12 +451,11 @@ main {
 /* Tours Section - Cuadrícula 3x3 */
 .tours-grid-3x3 {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    "tren tren parque"
-    "tolhuin laguna cerro"
-    "city . .";
+    "tren parque tolhuin laguna"
+    "tren cerro city .";
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1200px;
@@ -548,30 +547,28 @@ main {
   align-self: flex-start;
 }
 
-/* Responsive para cuadrícula 3x3 */
+/* Responsive para cuadrícula 2 filas */
 @media (max-width: 1024px) {
   .tours-grid-3x3 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "tren tren"
-      "parque tolhuin"
-      "laguna cerro"
-      "city .";
+      "tren tren tren"
+      "parque tolhuin laguna"
+      "cerro city .";
     gap: 1.25rem;
   }
 }
 
 @media (max-width: 768px) {
   .tours-grid-3x3 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "tren"
-      "parque"
-      "tolhuin"
-      "laguna"
-      "cerro"
-      "city";
+      "tren tren"
+      "parque tolhuin"
+      "laguna cerro"
+      "city .";
     gap: 1rem;
   }
 
