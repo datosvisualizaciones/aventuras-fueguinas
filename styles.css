@@ -452,11 +452,11 @@ main {
 .tours-grid-3x3 {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-    "tren parque tolhuin"
-    "tren laguna cerro"
-    "tren . city";
+    "tren tren parque"
+    "tolhuin laguna cerro"
+    "city . .";
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1200px;
@@ -535,7 +535,11 @@ main {
   line-height: 1.4;
   color: var(--color-muted);
   margin: 0 0 1rem;
-  flex: 1;
+}
+
+.tour-card-featured .tour-card-body p {
+  margin: 0 0 0.75rem;
+  flex: none;
 }
 
 .tour-card .btn-outline {
@@ -550,10 +554,10 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "tren parque"
-      "tren tolhuin"
+      "tren tren"
+      "parque tolhuin"
       "laguna cerro"
-      "city city";
+      "city .";
     gap: 1.25rem;
   }
 }
