@@ -456,7 +456,7 @@ main {
   grid-template-areas:
     "tren parque tolhuin"
     "tren laguna cerro"
-    "tren city city";
+    "tren . city";
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1200px;
