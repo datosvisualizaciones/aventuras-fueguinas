@@ -141,56 +141,6 @@
       </div>
     </section>
 
-    <section id="vehiculo" class="section section-light">
-      <div class="container">
-        <header class="section-header">
-          <h2>
-            <span class="lang-es">Nuestro Vehículo</span>
-            <span class="lang-en">Our Vehicle</span>
-          </h2>
-          <p>
-            <span class="lang-es">Contamos con un vehículo Toyota Hilux 4x4 completamente equipado para garantizar la seguridad y comodidad en todos nuestros tours por Tierra del Fuego. Adaptado para las condiciones extremas del fin del mundo.</span>
-            <span class="lang-en">We have a fully equipped Toyota Hilux 4x4 vehicle to ensure safety and comfort on all our tours through Tierra del Fuego. Adapted for the extreme conditions of the end of the world.</span>
-          </p>
-        </header>
-
-        <div class="vehiculo-carousel">
-          <div class="carousel-container">
-            <div class="carousel-track">
-              <div class="carousel-slide">
-                <img src="vehiculo-1.jpeg" alt="Toyota Hilux 4x4 - Vista frontal" />
-              </div>
-              <div class="carousel-slide">
-                <img src="vehiculo-2.jpeg" alt="Toyota Hilux 4x4 - Vista lateral" />
-              </div>
-              <div class="carousel-slide">
-                <img src="vehiculo-3.jpeg" alt="Toyota Hilux 4x4 - Vista trasera" />
-              </div>
-              <div class="carousel-slide">
-                <img src="vehiculo-4.jpeg" alt="Interior del vehículo completamente equipado" />
-              </div>
-            </div>
-            <button class="carousel-btn carousel-btn-prev" aria-label="Imagen anterior">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="15,18 9,12 15,6"></polyline>
-              </svg>
-            </button>
-            <button class="carousel-btn carousel-btn-next" aria-label="Imagen siguiente">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="9,18 15,12 9,6"></polyline>
-              </svg>
-            </button>
-          </div>
-          <div class="carousel-indicators">
-            <button class="indicator active" data-slide="0"></button>
-            <button class="indicator" data-slide="1"></button>
-            <button class="indicator" data-slide="2"></button>
-            <button class="indicator" data-slide="3"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="tren" class="section">
       <div class="container tren-layout">
         <div class="tren-main">
@@ -314,79 +264,6 @@
           applyLang(current);
         });
       }
-    })();
-
-    // Carrusel del vehículo
-    (function() {
-      const track = document.querySelector('.carousel-track');
-      const slides = document.querySelectorAll('.carousel-slide');
-      const prevBtn = document.querySelector('.carousel-btn-prev');
-      const nextBtn = document.querySelector('.carousel-btn-next');
-      const indicators = document.querySelectorAll('.indicator');
-
-      let currentIndex = 0;
-      let autoplayInterval;
-
-      function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * 25}%)`;
-
-        // Actualizar indicadores
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle('active', index === currentIndex);
-        });
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-      }
-
-      function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-      }
-
-      function startAutoplay() {
-        autoplayInterval = setInterval(nextSlide, 4000); // Cambia cada 4 segundos
-      }
-
-      function stopAutoplay() {
-        clearInterval(autoplayInterval);
-      }
-
-      // Event listeners
-      nextBtn.addEventListener('click', () => {
-        stopAutoplay();
-        nextSlide();
-        startAutoplay();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        stopAutoplay();
-        prevSlide();
-        startAutoplay();
-      });
-
-      indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-          stopAutoplay();
-          goToSlide(index);
-          startAutoplay();
-        });
-      });
-
-      // Pausar autoplay al pasar el mouse
-      const carousel = document.querySelector('.vehiculo-carousel');
-      carousel.addEventListener('mouseenter', stopAutoplay);
-      carousel.addEventListener('mouseleave', startAutoplay);
-
-      // Iniciar autoplay
-      startAutoplay();
     })();
   </script>
 </body>
