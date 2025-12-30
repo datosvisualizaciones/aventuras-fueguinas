@@ -625,3 +625,52 @@ main {
     padding-block: 6rem 4rem;
   }
 }
+
+/* Sección del Vehículo */
+.vehiculo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.vehiculo-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.vehiculo-image:hover {
+  transform: scale(1.05);
+}
+
+.vehiculo-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.vehiculo-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive para sección del vehículo */
+@media (max-width: 768px) {
+  .vehiculo-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vehiculo-image img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehiculo-image img {
+    height: 160px;
+  }
+}
