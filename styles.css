@@ -451,11 +451,8 @@ main {
 /* Tours Section - Cuadrícula 3x3 */
 .tours-grid-3x3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas:
-    "tren tren tolhuin laguna"
-    "parque cerro city .";
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1200px;
@@ -476,28 +473,6 @@ main {
 .tour-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-}
-
-.tour-card-featured {
-  position: relative;
-}
-
-.tour-card-featured::before {
-  content: "★";
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: var(--color-primary);
-  color: white;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  z-index: 2;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .tour-card-image {
@@ -534,11 +509,7 @@ main {
   line-height: 1.4;
   color: var(--color-muted);
   margin: 0 0 1rem;
-}
-
-.tour-card-featured .tour-card-body p {
-  margin: 0 0 0.75rem;
-  flex: none;
+  flex: 1;
 }
 
 .tour-card .btn-outline {
@@ -547,28 +518,17 @@ main {
   align-self: flex-start;
 }
 
-/* Responsive para cuadrícula 2 filas */
+/* Responsive para cuadrícula uniforme */
 @media (max-width: 1024px) {
   .tours-grid-3x3 {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "tren tren tren"
-      "parque tolhuin laguna"
-      "cerro city .";
+    grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
   }
 }
 
 @media (max-width: 768px) {
   .tours-grid-3x3 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "tren tren"
-      "parque tolhuin"
-      "laguna cerro"
-      "city .";
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
