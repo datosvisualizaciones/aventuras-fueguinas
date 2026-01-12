@@ -226,7 +226,7 @@ main {
 }
 
 .section {
-  padding-block: 3rem;
+  padding-block: 4rem 3rem;
 }
 
 .section-light {
