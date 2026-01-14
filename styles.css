@@ -919,6 +919,46 @@ main {
   }
 }
 
+/* Sección de Comunicación Internacional */
+#comunicacion .section-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#comunicacion .section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#comunicacion .section-header p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive para comunicación */
+@media (max-width: 768px) {
+  #comunicacion .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  #comunicacion .section-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #comunicacion .section-header h2 {
+    font-size: 1.3rem;
+  }
+
+  #comunicacion .section-header p {
+    font-size: 0.95rem;
+  }
+}
+
 /* Responsive para enlaces */
 @media (max-width: 768px) {
   .enlace-item {
